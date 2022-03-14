@@ -1,0 +1,192 @@
+/* ↓今回はここがポイント */
+.body_active {
+    overflow: hidden;
+}
+
+.icon {
+    height: 200px;
+    width: 500px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(212, 151, 212);
+    z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.openbtn {
+    position: fixed;
+    z-index: 999;
+    right: 32px;
+    width: 50px;
+    height: 70px;
+}
+
+.openbtn span {
+    display: inline-block;
+    transition: all.2s;
+    position: absolute;
+    left: 13px;
+    height: 3px;
+    background-color: #333;
+    width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+    background-color: #333;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+    background-color: #333;
+}
+
+.button_text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50px;
+}
+
+.button_text.close {
+    display: none;
+}
+
+.openbtn.active .close {
+    display: block;
+}
+
+.openbtn.active .menu {
+    display: none;
+}
+
+
+/* パネル部分 */
+.navigation {
+    position: fixed;
+    z-index: 99;
+    /*ナビのスタート位置と形状*/
+    top: 0;
+    right: -120%;
+    width: min(100%, 400px);
+    height: 100vh;
+    background: pink;
+    /*動き*/
+    transition: all 0.6s;
+}
+
+.navigation.panelactive {
+    right: 0;
+}
+
+/*パネルを開いた際の メニュー内容 */
+.navigation ul {
+    position: absolute;
+    list-style: none;
+    /* 下記は、list-style:noneにしてもなお残る左側の空間をなくす為の記述 */
+    padding-left: 0;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.navigation ul li {
+    /* color: red; */
+    /* text-decoration: none; */
+    padding: 10px;
+    display: block;
+    text-align: center;
+    /* 文字間数字を設定している */
+    /* letter-spacing: 1em; */
+}
+
+
+.navigation ul li a {
+    color: red;
+    text-decoration: none;
+    /* padding: 10px; */
+    /* display: block; */
+    /* 文字間数字を設定している */
+    letter-spacing: 1em;
+}
+
+.subtitle {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.a {
+    height: 200px;
+    width: 100%;
+    background: lightblue;
+}
+
+.b {
+    height: 200px;
+    width: 100%;
+    background: lightgoldenrodyellow
+}
